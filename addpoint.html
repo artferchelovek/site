@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление очков</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="https://i.ytimg.com/vi/O0ez5KolebA/maxresdefault.jpg">
+</head>
+
+<body>
+
+
+    <div class="rectangle3"></div>
+    <p class="text-in-rectangle3">добавление очков</p>
+    <div class="text-on-the-pages2">Для начала создадим переменную «count = 0», позже добавим шрифт, <pre class="code"><code>myfont = pygame.font.SysFont('monospace', 15)</code></pre> а после
+    этого сделаем само отображение очков. <pre class="code"><code>string = myfont.render('Очков: ' + str(count), 0, (255,0,0))</code></pre> Его мы должны
+    записать перед командой покраски заднего фона. И наконец мы пишем под командой заливки заднего фона данную команду
+    «screen.blit(string, (0, 50))». Строку с очками мы сделали, но нужно сделать так, чтобы они добавлялись. <br>
+    Для этого под командой где мы импортировали библиотку пропишем очень сложную формулу: 
+    <pre class="code"><code>def inter(x1, y1, x2, y2, db1, db2):
+    if x1 > x2 - db1 and x1 < x2 + db2 and y1 < y2 + db2: 
+        return 1 
+    else: 
+        return 0</code></pre>И после биндов клавиш прописываем эту команду: <pre class="code"><code>if inter(a_x, a_y, z_x, z_y, 20, 40):
+        count += 1
+        strike = False
+        a_y = 1000
+        a_x = 1000</code></pre>
+    </div>
+    <div class="wrapper">
+        <input id="menu" type="checkbox">
+        <label for="menu"><img class="menu"
+                src="https://media.discordapp.net/attachments/573724896665010197/891631837858910279/unknown.png"
+                alt=""></label>
+        <form action="" class="popup">
+            <div class="rectangle4">
+                <a href="index.html#catalog" class="href22">Главная</a>
+                <a href="what-python.html" class="href12">Что такое Python?</a>
+                <a href="history.html" class="href13">История создания Python</a>
+                <a href="using.html" class="href14">Где используется Python?</a>
+                <a href="chooselibary.html" class="href15">Выбор библиотеки и её установка</a>
+                <a href="createwindow.html" class="href16">Создание игрового окна</a>
+                <a href="createbg.html" class="href17">Создание заднего фона и нашего персонажа</a>
+                <a href="createplayer.html" class="href18">Создание противника</a>
+                <a href="createarrow.html" class="href19">Создание стрелы</a>
+                <a href="addpoint.html" class="href20">Добавление очков</a>
+                <a href="design.html" class="href21">Дизайн</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

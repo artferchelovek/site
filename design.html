@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дизайн</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="https://i.ytimg.com/vi/O0ez5KolebA/maxresdefault.jpg">
+</head>
+
+<body>
+
+
+    <div class="rectangle3"></div>
+    <p class="text-in-rectangle3">дизайн</p>
+    <div class="text-on-the-pages2">Игру мы сделали, только чего то в ней не хватает, не хватает дизайна. Для то чтобы сделать дизайн игры мы должны
+    запустить программу «Paint». Для того чтобы нарисовать наших персонажей, мы должны изменить размер окна под размер своих
+    персонажей. Например, для главного героя 40*40, для врага 40*40, а для стрелы 20*40. Фон мы делаем чёрный и начинаем
+    творить, не забывая конечно всё сохранять. (Я сохранил главного игрока под именем p.png, стрелу arrow.png, а врага
+    z.png) <br>
+    Нарисовав персонажей, мы должны импортировать их в игру прописав команды под командами создания объектов: <pre class="code"><code>img_a = pygame.image.load('arrow.png')
+img_p = pygame.image.load('p.png')
+img_z = pygame.image.load('z.png')</code></pre><br>
+    Где у меня написано arrow.png и т.д. вы пропишите свои названия.
+    Дальше мы должны убрать у них чёрный фон прописав ниже: <pre class="code"><code>player.set_colorkey((0, 0 ,0))
+arrow.set_colorkey((0, 0 ,0))
+zet.set_colorkey((0, 0 ,0))</code></pre> <br>
+    А уже под командой заливки фона пропишем это: <pre class="code"><code>zet.blit(img_z, (0, 0))
+arrow.blit(img_a, (0, 0))
+player.blit(img_p, (0, 0))</code></pre>
+    </div>
+    <div class="wrapper">
+        <input id="menu" type="checkbox">
+        <label for="menu"><img class="menu"
+                src="https://media.discordapp.net/attachments/573724896665010197/891631837858910279/unknown.png"
+                alt=""></label>
+        <form action="" class="popup">
+            <div class="rectangle4">
+                <a href="index.html#catalog" class="href22">Главная</a>
+                <a href="what-python.html" class="href12">Что такое Python?</a>
+                <a href="history.html" class="href13">История создания Python</a>
+                <a href="using.html" class="href14">Где используется Python?</a>
+                <a href="chooselibary.html" class="href15">Выбор библиотеки и её установка</a>
+                <a href="createwindow.html" class="href16">Создание игрового окна</a>
+                <a href="createbg.html" class="href17">Создание заднего фона и нашего персонажа</a>
+                <a href="createplayer.html" class="href18">Создание противника</a>
+                <a href="createarrow.html" class="href19">Создание стрелы</a>
+                <a href="addpoint.html" class="href20">Добавление очков</a>
+                <a href="design.html" class="href21">Дизайн</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

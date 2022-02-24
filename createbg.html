@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание заднего фона и персонажа</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="https://i.ytimg.com/vi/O0ez5KolebA/maxresdefault.jpg">
+</head>
+
+<body>
+
+
+    <div class="rectangle3"></div>
+    <p class="text-in-rectangle3">задний фон и персонаж</p>
+    <div class="text-on-the-pages2">Для того чтобы создать задний фон, мы должны определиться с цветом, я выбрал зелёный цвет. Персонаж изначально будет
+    чёрный. <br><br>
+    Мы должны создать три переменных, «window», «screen» и «player». И расположить там некую информацию. Готовый код: <pre class="code"><code>window = pygame.display.set_mode( (400, 400) )
+screen = pygame.Surface( (400, 400) )
+player = pygame.Surface( (40, 40) )</code></pre>Чтобы «покрасить» задний фон, нам нужно спустится в конец кода и прописать команды: <pre class="code"><code>screen.fill( (0,255, 0) )
+window.blit(screen, (0, 0))
+pygame.display.update()</code></pre>
+Чтобы создать персонажа, нужно сделать точку его появления. Это мы сделаем переменными, назовём их «x_p» - точку
+появления по x и «y_p» - точку появление по y. Дальше под командой «screen.fill((0,255, 0))», пишем «screen.blit(player,
+(x_p, y_p))». <br><br>
+Чтобы персонаж двигался нужно записать данные команды в цикл: <pre class="code"><code>if e.type == pygame.KEYDOWN and e.key == pygame.K_s:
+    y_p += 5
+if e.type == pygame.KEYDOWN and e.key == pygame.K_w:
+    y_p -= 5
+if e.type == pygame.KEYDOWN and e.key == pygame.K_a:
+    x_p -= 5
+if e.type == pygame.KEYDOWN and e.key == pygame.K_d:
+    x_p += 5
+if e.type == pygame.KEYDOWN and e.key == pygame.K_SPACE:
+    if strike == False:
+        strike = True
+        a_x = x_p
+        a_y = y_p – 40</code></pre>Теперь наш персонаж двигается на клавиши W,A,S,D
+    </div>
+    <div class="wrapper">
+        <input id="menu" type="checkbox">
+        <label for="menu"><img class="menu"
+                src="https://media.discordapp.net/attachments/573724896665010197/891631837858910279/unknown.png"
+                alt=""></label>
+        <form action="" class="popup">
+            <div class="rectangle4">
+                <a href="index.html#catalog" class="href22">Главная</a>
+                <a href="what-python.html" class="href12">Что такое Python?</a>
+                <a href="history.html" class="href13">История создания Python</a>
+                <a href="using.html" class="href14">Где используется Python?</a>
+                <a href="chooselibary.html" class="href15">Выбор библиотеки и её установка</a>
+                <a href="createwindow.html" class="href16">Создание игрового окна</a>
+                <a href="createbg.html" class="href17">Создание заднего фона и нашего персонажа</a>
+                <a href="createplayer.html" class="href18">Создание противника</a>
+                <a href="createarrow.html" class="href19">Создание стрелы</a>
+                <a href="addpoint.html" class="href20">Добавление очков</a>
+                <a href="design.html" class="href21">Дизайн</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
